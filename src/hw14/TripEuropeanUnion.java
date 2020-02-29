@@ -53,12 +53,10 @@ public class TripEuropeanUnion {
                 System.out.println("Не верный формат даты: " + list.get(i).substring(0, 10));
                 valid = false;
             }
-        }
-        for (int i = 0; i < list.size(); i++) {
             if (list.get(i).contains("-")) {
-                String value = list.get(i).substring(13);
+                String value2 = list.get(i).substring(13);
                 try {
-                    formatter.parse(value);
+                    formatter.parse(value2);
                 } catch (ParseException e) {
                     System.out.println("Не верный формат даты: " + list.get(i).substring(13));
                     valid = false;
